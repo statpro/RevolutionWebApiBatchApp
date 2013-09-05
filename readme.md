@@ -26,7 +26,7 @@ For more information:-
 * [Revolution Web API](http://developer.statpro.com/Revolution/WebApi/Intro)
 * [Revolution OAuth2 Server](http://developer.statpro.com/Revolution/WebApi/Authorization/Overview)
 * [Registering your own application](http://developer.statpro.com/Revolution/WebApi/Authorization/Registration)
-* [Revolution OAuth2 application workflow](http://developer.statpro.com/Revolution/WebApi/Authorization/Workflow)
+* [Batch applications](http://developer.statpro.com/Revolution/WebApi/Authorization/BatchApps)
 * [OAuth 2.0](http://tools.ietf.org/html/rfc6749)
 * [OAuth 2.0 client security considerations](http://tools.ietf.org/html/rfc6819#section-4.1)
 * [Revolution Web API and OAuth2 Support](mailto:webapisupport@statpro.com)
@@ -45,7 +45,7 @@ The following techniques are not demonstrated by this simple sample application.
 * getting [portfolios](http://developer.statpro.com/Revolution/WebApi/Resource/Portfolios), [analysis](http://developer.statpro.com/Revolution/WebApi/Resource/PortfolioAnalysis) and results data from the Web API
 * detecting if the Web API has returned one of its [specific errors](http://developer.statpro.com/Revolution/WebApi/Intro#statusCodes)
 * detecting request blockage by the Web API due to a [Fair Usage Policy violation](http://developer.statpro.com/Revolution/WebApi/FairUsagePolicy)
-* detecting if the Web API has [rejected the access token because it has expired](http://developer.statpro.com/Revolution/WebApi/Authorization/Workflow#step4)
+* detecting if the Web API has [rejected the access token because it has expired](http://developer.statpro.com/Revolution/WebApi/Authorization/BatchApps#step5)
 
 Please see other samples on GitHub that cover these techniques.
 
