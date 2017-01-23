@@ -3,13 +3,7 @@
  * is provided on an AS-IS basis.  This isn't production quality code; it is mainly intended to show the techniques
  * involved in talking to the StatPro Revolution OAuth2 Server from a Batch app.
  * 
- * To access data from the Revolution Web API on behalf of a user, the user must have created a "batch authorization"
- * for the Batch application in question on the StatPro Revolution API Authorization Management website, whose address
- * is https://revapiauth.statpro.com  This process results in the generation of an application-specific password (ASP).
- * The user's username (= email address) and ASP must both be made known to the Batch application, which must store
- * this data privately and securely.  At runtime, the application obtains an access token from the StatPro Revolution
- * OAuth2 Server for a user by submitting the user's username and accompanying ASP to the OAuth2 Server's token
- * endpoint via the OAuth 2.0 Resource Owner Password flow.
+ * See the sample's readme.md file for more details.
  * 
  * Note that Batch applications are not issued refresh tokens; getting a new access token for a particular user
  * (after the previous one expires) is done in the same way as getting an access token in the first place.
@@ -156,21 +150,6 @@ namespace RevolutionWebApiBatchApp
                 //     "error_description": "Username and/or password is invalid, or they apply to another client."
                 //   }
                 //
-                // Note that a user may revoke a previously generated ASP on the StatPro Revolution API Authorization
-                // Management website (https://revapiauth.statpro.com/), and this will cause a failure to get an
-                // access token at runtime until such time as the user creates a new "batch authorization" and makes
-                // its ASP known to the Batch application.
-                //
-                // An error code that is of particular importance to Batch applications is the non-standard code
-                // "termsofuse_not_accepted" (i.e. this is not a standard OAuth 2.0 error code).  This error code
-                // indicates that the user in question hasn't accepted the latest version(s) of the Terms of Use
-                // that cover the Revolution Web API.  Whereas the user of a Server-Side Web application or a Native
-                // application will be prompted to accept the latest Terms of Use (if unaccepted) at runtime, this
-                // doesn't apply to Batch applications since there is no UI/UX at runtime.  Instead the
-                // "termsofuse_not_accepted" error code is returned, and the Batch application should log that the
-                // user in question should visit https://revapiauth.statpro.com/ to view their accessible resource
-                // services and their covering Terms of Use.
-                // 
                 // For more details of the errors that can be returned, please see the StatPro Revolution OAuth2 Server
                 // documentation:- http://developer.statpro.com/Revolution/WebApi/Authorization
 

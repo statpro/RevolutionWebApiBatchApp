@@ -1,11 +1,9 @@
 
 # Introduction #
 
-This is a lightweight sample that shows how a Batch application - in this case a Windows Console application - can get user data from the StatPro Revolution Web API.  This involves talking to the StatPro Revolution OAuth2 Server to get an access token from a user's username (= email address) in combination with a special type of password known as an application-specific password (ASP).
+This is a lightweight sample that shows how a Batch application - in this case a Windows Console application - can get user data from the StatPro Revolution Web API.  This involves talking to the StatPro Revolution OAuth2 Server to get an access token from a Data Feed User's username (= email address) in combination with a special type of password known as an application-specific password (ASP).
 
-The main point of a Batch application is that it doesn't need to prompt the user for access to his/her data at runtime.  Instead users must visit the [StatPro Revolution API Authorization Management website](https://revapiauth.statpro.com) and create a "batch authorization" that will allow a Batch application to access their data later on, i.e. at runtime.  This process results in the generation of an application-specific password (ASP).  The user's username (= email address) and ASP must both be made known to the Batch application, which must store this data privately and securely.  At runtime, the application obtains an access token from the StatPro Revolution OAuth2 Server for a user by submitting the user's username and accompanying ASP to the OAuth2 Server's token endpoint via the OAuth 2.0 Resource Owner Password flow.
-
-Note that a user may revoke a previously generated ASP on the [StatPro Revolution API Authorization Management website](https://revapiauth.statpro.com/), and this will cause a failure by the application to get an access token at runtime until such time as the user creates a new "batch authorization" and makes its ASP known to the Batch application.
+For more information how Batch applications work, see the [Batch applications](http://developer.statpro.com/Revolution/WebApi/Authorization/BatchApps) page on the Revolution Web API's documentation website.
 
 The sample is written in C# 5 and .NET 4.5.
 
@@ -48,8 +46,6 @@ The following techniques are not demonstrated by this simple sample application.
 * detecting if the Web API has [rejected the access token because it has expired](http://developer.statpro.com/Revolution/WebApi/Authorization/BatchApps#step5)
 
 Please see other samples on GitHub that cover these techniques.
-
-Another technique that is not demonstrated, and which is particular to Batch applications, is detecting if the request for an access token failed because the user hasn't accepted the latest version(s) of the Terms of Use that cover the Revolution Web API.  For more details, see the relevant comment in the sample's Program.cs file. 
 
 
 # License #
