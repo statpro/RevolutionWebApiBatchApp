@@ -27,7 +27,7 @@ For more information:-
 * [Batch applications](http://developer.statpro.com/Revolution/WebApi/Authorization/BatchApps)
 * [OAuth 2.0](http://tools.ietf.org/html/rfc6749)
 * [OAuth 2.0 client security considerations](http://tools.ietf.org/html/rfc6819#section-4.1)
-* [Revolution Web API and OAuth2 Support](mailto:webapisupport@statpro.com)
+* [Revolution Web API and OAuth2 Support](mailto:webapisupport@confluence.com)
 
 
 # What the sample demonstrates #
